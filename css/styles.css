@@ -1,0 +1,373 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1840px;
+  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+}
+
+::-moz-placeholder {
+  color: #666;
+}
+
+:-ms-input-placeholder {
+  color: #666;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::-moz-selection {
+  background-color: #ffd95e;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ffd95e;
+  color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  min-height: 100vh;
+  min-width: 320px;
+  position: relative;
+  text-rendering: optimizeSpeed;
+}
+
+.section-title {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+input[type='submit'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  padding: 15px 73px;
+  color: #1e1e1e;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(218, 175, 83), #d19e4d, #fff9b1, #f1d37d);
+  box-shadow: 0px 6px 32px 0px rgba(1, 26, 45, 0.75);
+}
+
+.way {
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
+.way__title {
+  margin-bottom: 24px;
+}
+
+.way__subtitle {
+  margin-bottom: 56px;
+}
+
+.way__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+.way__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.333333333333336% - 30px);
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.way__item:hover .way__btn-wrapper {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.way__pic {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 237px;
+  height: 237px;
+  border-radius: 50%;
+  border: 10px solid #012743;
+  box-shadow: 0px 6px 32px 0px rgba(199, 199, 199, 0.75);
+  background-color: #012743;
+  overflow: hidden;
+}
+
+.way__pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.way__header {
+  margin-bottom: 28px;
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.way__descr {
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 290px;
+  margin: 0 auto;
+}
+
+.way__btn-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  background: linear-gradient(0deg, rgba(1, 62, 107, 0.7) 0%, #01223b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.way__btn {
+  padding: 15px 25px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .section-title {
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .way {
+    padding-top: 65px;
+    padding-bottom: 63px;
+  }
+
+  .way__list {
+    max-width: 100%;
+  }
+
+  .way__item {
+    width: calc(50% - 30px);
+  }
+
+  .way__header {
+    margin-bottom: 23px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .way {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+
+  .way__item {
+    width: calc(100% - 30px);
+  }
+
+  .way__header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
