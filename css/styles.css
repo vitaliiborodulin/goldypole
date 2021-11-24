@@ -158,7 +158,7 @@ img {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #1e1e1e;
   min-height: 100vh;
@@ -170,13 +170,11 @@ body {
 .section-title {
   font-size: 35px;
   line-height: 40px;
-  font-weight: 500;
 }
 
 .section-subtitle {
   font-size: 18px;
   line-height: 24px;
-  font-weight: 500;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */
@@ -190,6 +188,10 @@ select {
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
+*:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
 input[type='submit'] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -201,16 +203,35 @@ input[type='submit'] {
 }
 
 .btn {
-  padding: 15px 73px;
+  display: inline-block;
+  padding: 10px 16px;
   color: #1e1e1e;
   text-decoration: none;
   font-size: 13px;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
+  text-align: center;
   border-radius: 30px;
   cursor: pointer;
+  transition: all 0.3s ease;
   background: linear-gradient(90deg, rgba(218, 175, 83), #d19e4d, #fff9b1, #f1d37d);
   box-shadow: 0px 6px 32px 0px rgba(1, 26, 45, 0.75);
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, rgba(218, 175, 83), #d19e4d, #f1d37d);
+}
+
+.btn-o {
+  border: 2px solid #013b66;
+  color: #013b66;
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-o:hover {
+  color: #ffffff;
+  background: #013b66;
 }
 
 .way {
@@ -258,9 +279,9 @@ input[type='submit'] {
   width: 237px;
   height: 237px;
   border-radius: 50%;
-  border: 10px solid #012743;
+  border: 10px solid #013b66;
   box-shadow: 0px 6px 32px 0px rgba(199, 199, 199, 0.75);
-  background-color: #012743;
+  background-color: #013b66;
   overflow: hidden;
 }
 
@@ -301,8 +322,120 @@ input[type='submit'] {
           transform-origin: 0 0;
 }
 
-.way__btn {
-  padding: 15px 25px;
+.way__banner {
+  background: url(../img/way-banner.jpg) no-repeat center right / cover;
+}
+
+.banner {
+  padding-top: 94px;
+  padding-left: 143px;
+  padding-bottom: 68px;
+  border-radius: 20px;
+  background-color: #e3d3e5;
+  box-shadow: 0px 6px 32px 0px rgba(199, 199, 199, 0.75);
+}
+
+.banner__header {
+  margin-bottom: 30px;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.banner__descr {
+  margin-bottom: 47px;
+  max-width: 550px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts {
+  padding-top: 63px;
+  padding-bottom: 65px;
+}
+
+.contacts__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.contacts__info {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(41.66666666666667% - 30px);
+  margin-bottom: 40px;
+}
+
+.contacts__map {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(58.333333333333336% - 30px);
+}
+
+.contacts__title {
+  margin-bottom: 43px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts__list {
+  margin-bottom: 37px;
+  font-weight: 400;
+}
+
+.contacts__list li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 24px;
+  max-width: 210px;
+}
+
+.contacts__list li::before {
+  position: absolute;
+  content: '';
+  top: 0;
+}
+
+.contacts__list li:first-child:before {
+  left: -10px;
+  width: 34px;
+  height: 46px;
+  background: url(../img/contacts-pick.svg) no-repeat;
+}
+
+.contacts__list li:last-child:before {
+  left: -6px;
+  width: 26px;
+  height: 26px;
+  background: url(../img/contacts-phone.svg) no-repeat;
+}
+
+.contacts__list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contacts__list a:hover {
+  text-decoration: underline;
+}
+
+.contacts__map {
+  height: 350px;
+  background: url(../img/map.jpg) no-repeat center / cover;
+}
+
+.footer {
+  padding-top: 35px;
+  padding-bottom: 24px;
+  color: #ffffff;
+  background-color: #013b66;
 }
 
 @media screen and (max-width: 992px) {
@@ -341,12 +474,40 @@ input[type='submit'] {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
   }
 
+  .contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contacts__info {
+    width: calc(100% - 30px);
+  }
+
+  .contacts__info {
+    text-align: center;
+  }
+
+  .contacts__map {
+    width: calc(100% - 30px);
+  }
+
+  .contacts__list {
+    text-align: left;
+  }
+
+  .contacts__list li {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
   .way {
     padding-top: 48px;
     padding-bottom: 50px;
