@@ -497,6 +497,11 @@ input[type='submit'] {
     width: calc(100% - 30px);
   }
 
+  .contacts__title {
+    font-size: 23px;
+    line-height: 25px;
+  }
+
   .contacts__list {
     text-align: left;
   }
