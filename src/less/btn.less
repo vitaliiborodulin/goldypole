@@ -1,5 +1,7 @@
 .btn {
-	padding: 15px 73px;
+	display: inline-block;
+	// padding: 15px 73px;
+	padding: 10px 16px;
 	
 	color: @black;
 	text-decoration: none;
@@ -7,10 +9,39 @@
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
 
+	text-align: center;
 	border-radius: 30px;
 
 	cursor: pointer;
 
+	transition: all 0.3s ease;
 	background: linear-gradient( 90deg, rgba(218,175,83), rgb(209,158,77), rgb(255,249,177), rgb(241,211,125));
 	box-shadow: 0px 6px 32px 0px rgba(1, 26, 45, 0.75);
+	
+	&:hover {
+		background: linear-gradient( 90deg, rgba(218,175,83), rgb(209,158,77), rgb(241,211,125));
+	}
+}
+
+.btn-o {
+	border: 2px solid @blue;
+	color: @blue;
+	background: transparent;
+	box-shadow: none;
+
+	&:hover {
+		color: @white;
+		background: @blue;
+	}
+}
+
+.btn-o-w {
+	border-color: @white;
+	color: white;
+
+	&:hover {
+		color: @blue;
+		background: @white;
+		border-color: @blue;
+	}
 }

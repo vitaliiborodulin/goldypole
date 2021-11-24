@@ -13,12 +13,12 @@ module.exports = {
             width: '992px',
             fields: '70px'
         },
-        // md: {
-        //     width: '768px',
-        // },
-        sm: {
-            width: '576px',
+        md: {
+            width: '768px',
             fields: '20px'
+        },
+        sm: {
+            width: '576px'
         },
         // xs: {
         //  width: '341px',

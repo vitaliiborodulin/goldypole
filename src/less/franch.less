@@ -1,0 +1,69 @@
+.franch {
+	padding-top: 158px;
+	padding-bottom: 107px;
+
+	background-color: @grey;
+	background-image: url(../img/franch.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: right;
+	background-position-y: center;
+	color: @white;
+
+	&::after {
+		display: none;
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 387px;
+		background: url(../img/franch-mob.jpg) no-repeat right center/cover;
+
+		.md(display, block);
+	}
+
+	.lg-block({
+		padding-top: 48px;
+		padding-bottom: 65px;
+
+		background-position-x: -550px;
+	});
+
+	.md-block({
+		text-align: center;
+		background-image: none;
+		padding-bottom: 387px;
+	});
+
+	&__content {
+		.row-flex();
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	&__info {
+		.col();
+		.size(8);
+		.size-md(12);
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	p {
+		max-width: 580px;
+		margin-bottom: 17px;
+		font-size: 18px;
+	}
+
+	p + p {
+		margin-bottom: 50px;
+	}
+
+	&__btn {
+		margin-bottom: 36px;
+		padding: 10px 60px;
+	}
+}

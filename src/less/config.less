@@ -2,10 +2,11 @@
 
 @accent: #ffd95e; // Accent Color
 @fontsize: 14px; // Body Font Size
-@lineheight: 1.875; // Document Line Height
+// @lineheight: 1.875; // Document Line Height
 @white: #ffffff;
 @black: #1e1e1e;
-@blue: #012743;
+@blue: #013b66;
+@grey: #76757a;
 
 
 @userfont: 'Montserrat', sans-serif;
@@ -30,6 +31,10 @@
 ::selection {
 	background-color: @accent;
 	color: #fff;
+}
+
+section {
+	position: relative;
 }
 
 // :root {
@@ -58,7 +63,7 @@
 body {
 	font-family: @userfont;
 	font-size: @fontsize;
-	font-weight: 400;
+	font-weight: 500;
 	// line-height: @lineheight;
 	line-height: 1.5;
 	color: @black;
@@ -72,18 +77,23 @@ body {
 .section-title {
 	font-size: 35px;
 	line-height: 40px;
-	font-weight: 500;
+	// font-weight: 500;
 
 	.lg-block({
-		font-size: 23px;
-		line-height: 25px;
-	})
+		font-size: 25px;
+		line-height: 30px;
+	});
+
+	// .md-block({
+	// 	font-size: 25px;
+	// 	line-height: 30px;
+	// })
 }
 
 .section-subtitle {
 	font-size: 18px;
 	line-height: 24px;
-	font-weight: 500;
+	// font-weight: 500;
 
 	.lg-block({
 		font-size: 16px;
@@ -107,6 +117,11 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+// Remove all mouse-triggered focus styles without breaking keyboard accessibility
+*:focus:not(:focus-visible) { 
+	outline: none !important; 
 }
 
 // remove cross
