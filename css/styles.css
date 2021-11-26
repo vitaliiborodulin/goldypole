@@ -159,16 +159,22 @@ section {
   margin: -1px;
 }
 
+html,
 body {
+  height: 100%;
+}
+
+body {
+  padding-top: 60px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: #1e1e1e;
-  min-height: 100vh;
   min-width: 320px;
   position: relative;
   text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
 }
 
 .section-title {
@@ -247,6 +253,73 @@ input[type='submit'] {
   color: #013b66;
   background: #ffffff;
   border-color: #013b66;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.header__top {
+  padding: 10px 0;
+  color: #ffffff;
+  background-color: #013b66;
+}
+
+.header__top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__top-content p {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header__top-content a {
+  margin-left: 20px;
+}
+
+.header__top-content a + a {
+  margin-left: 15px;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.hero {
+  padding-top: 40px;
+  background-color: #76757a;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  background-image: url(../img/hero-bg.jpg);
+}
+
+.hero__content {
+  min-height: 100vh;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero__title {
+  margin-bottom: 35px;
+  font-size: 70px;
+  line-height: 75px;
+  font-weight: 400;
+}
+
+.hero__btn {
+  padding: 10px 60px;
 }
 
 .way {
@@ -1704,6 +1777,11 @@ iframe.wait-autoplay {
 }
 
 @media screen and (max-width: 1200px) {
+  .hero {
+    background-position-x: right;
+    background-image: url(../img/hero-tab-bg.jpg);
+  }
+
   .banner {
     padding: 54px 34px;
   }
@@ -1785,6 +1863,29 @@ iframe.wait-autoplay {
   .container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .header__top-content p {
+    display: none;
+  }
+
+  .header__top-content a {
+    margin-left: 0;
+  }
+
+  .hero {
+    background-position-x: center;
+    background-image: url(../img/hero-mob-bg.jpg);
+  }
+
+  .hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 35px;
+    line-height: 40px;
   }
 
   .faq__title {
