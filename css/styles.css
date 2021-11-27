@@ -138,12 +138,12 @@ img {
 }
 
 ::-moz-selection {
-  background-color: #ffd95e;
+  background-color: #F3D884;
   color: #fff;
 }
 
 ::selection {
-  background-color: #ffd95e;
+  background-color: #F3D884;
   color: #fff;
 }
 
@@ -165,7 +165,6 @@ body {
 }
 
 body {
-  padding-top: 60px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -229,6 +228,11 @@ input[type='submit'] {
 }
 
 .btn:hover {
+  -webkit-animation: none;
+          animation: none;
+  box-shadow: none;
+  -webkit-transform: translateY(-5px) scale(1.02);
+          transform: translateY(-5px) scale(1.02);
   background: linear-gradient(90deg, rgba(218, 175, 83), #d19e4d, #f1d37d);
 }
 
@@ -242,6 +246,8 @@ input[type='submit'] {
 .btn-o:hover {
   color: #ffffff;
   background: #013b66;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .btn-o-w {
@@ -262,8 +268,17 @@ input[type='submit'] {
   z-index: 2;
 }
 
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
 .header__top {
-  padding: 10px 0;
+  padding: 8px 0;
   color: #ffffff;
   background-color: #013b66;
 }
@@ -287,22 +302,70 @@ input[type='submit'] {
   margin-left: 15px;
 }
 
+.header__bottom {
+  padding: 14px 40px;
+  max-width: 1840px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.header__bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  padding: 0 30px;
+}
+
 .header__menu {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu li {
+  margin: 0 30px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.header__login {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__login svg {
+  margin-right: 15px;
+}
+
+.header__login a {
+  text-decoration: underline;
+}
+
+.header__more {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__more li + li {
+  margin-left: 60px;
 }
 
 .hero {
-  padding-top: 40px;
   background-color: #76757a;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: bottom;
-  background-size: cover;
-  background-image: url(../img/hero-bg.jpg);
+  background-position-y: bottom, center;
+  background-size: contain, cover;
+  background-image: url(../img/goldypole-text.svg), url(../img/hero-bg-1.jpg);
 }
 
 .hero__content {
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 900px;
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
@@ -312,7 +375,7 @@ input[type='submit'] {
 }
 
 .hero__title {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   font-size: 70px;
   line-height: 75px;
   font-weight: 400;
@@ -448,6 +511,11 @@ input[type='submit'] {
   padding-bottom: 97px;
 }
 
+.banner__box--p {
+  padding: 0;
+  margin-top: -145px;
+}
+
 .banner__header {
   margin-bottom: 24px;
   max-width: 65%;
@@ -474,6 +542,142 @@ input[type='submit'] {
 
 .nut__banner::after {
   background-image: url(../img/nut-mob.jpg);
+}
+
+.pay__banner {
+  background-image: url(../img/pay-banner.jpg);
+}
+
+.pay__banner::after {
+  background-image: url(../img/pay-mob.jpg);
+}
+
+.abon {
+  padding-top: 60px;
+  padding-bottom: 190px;
+  color: #ffffff;
+  background-color: #76757a;
+  background-repeat: no-repeat;
+  background-image: url(../img/goldypole-only-text.svg);
+  background-position-x: left;
+  background-position-y: top;
+}
+
+.abon__title {
+  margin-bottom: 20px;
+}
+
+.abon__subtitle {
+  margin-bottom: 70px;
+  font-size: 16px;
+}
+
+.abon__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.abon__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+  margin-bottom: 70px;
+  padding: 0 60px;
+}
+
+.abon__item:nth-child(even):not(.abon__banner) {
+  border-left: 1px solid #ffffff;
+}
+
+.abon__item:not(.abon__banner) .abon__header {
+  margin-bottom: -13px;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #76757a;
+  text-shadow: 0 -1px 1px #F3D884, 0 -1px 1px #F3D884, 0 1px 1px #F3D884, 0 1px 1px #F3D884, -1px 0 1px #F3D884, 1px 0 1px #F3D884, -1px 0 1px #F3D884, 1px 0 1px #F3D884, -1px -1px 1px #F3D884, 1px -1px 1px #F3D884, -1px 1px 1px #F3D884, 1px 1px 1px #F3D884, -1px -1px 1px #F3D884, 1px -1px 1px #F3D884, -1px 1px 1px #F3D884, 1px 1px 1px #F3D884;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.abon__item:not(.abon__banner) .abon__count {
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.abon__descr {
+  margin-bottom: 38px;
+  max-width: 380px;
+}
+
+.abon__descr li {
+  margin-bottom: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.abon__pay {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.abon__price {
+  margin-right: 35px;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+
+.abon__btn {
+  padding: 10px 60px;
+  margin-bottom: 35px;
+}
+
+.abon__banner {
+  padding: 50px 37px 35px;
+  border-radius: 15px;
+  border: 3px solid #F3D884;
+  border-left-color: #F3D884;
+}
+
+.abon__banner .abon__header {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.abon__banner .abon__count {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.shed {
+  padding-top: 125px;
+}
+
+.shed__title {
+  margin-bottom: 60px;
+}
+
+.shed__box {
+  background-color: #76757a;
+  min-height: 700px;
 }
 
 .faq {
@@ -757,13 +961,18 @@ input[type='submit'] {
   margin-right: -15px;
 }
 
-.footer__logo {
+.footer .logo {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
   width: calc(25% - 30px);
   margin-bottom: 30px;
+}
+
+.footer .logo img {
+  -webkit-filter: invert(99%) sepia(89%) saturate(485%) hue-rotate(186deg) brightness(119%) contrast(100%);
+          filter: invert(99%) sepia(89%) saturate(485%) hue-rotate(186deg) brightness(119%) contrast(100%);
 }
 
 .footer__menu {
@@ -1777,9 +1986,17 @@ iframe.wait-autoplay {
 }
 
 @media screen and (max-width: 1200px) {
+  .header__more li + li {
+    margin-left: 40px;
+  }
+
   .hero {
-    background-position-x: right;
-    background-image: url(../img/hero-tab-bg.jpg);
+    background-position-x: center, -600px;
+  }
+
+  .hero__title {
+    font-size: 35px;
+    line-height: 40px;
   }
 
   .banner {
@@ -1792,6 +2009,36 @@ iframe.wait-autoplay {
   }
 
   .banner__descr {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .abon__item {
+    text-align: center;
+  }
+
+  .abon__item:not(.abon__banner) {
+    padding: 0 36px;
+  }
+
+  .abon__item:not(.abon__banner) .abon__header {
+    font-size: 45px;
+  }
+
+  .abon__pay {
+    justify-content: center;
+  }
+
+  .abon__price {
+    margin-left: 35px;
+  }
+
+  .abon__banner .abon__header {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .abon__banner .abon__count {
     font-size: 16px;
     line-height: 21px;
   }
@@ -1821,6 +2068,14 @@ iframe.wait-autoplay {
     line-height: 24px;
   }
 
+  .header__more li + li {
+    margin-left: 20px;
+  }
+
+  .hero {
+    background-position-x: center, -760px;
+  }
+
   .way {
     padding-top: 65px;
     padding-bottom: 63px;
@@ -1844,13 +2099,29 @@ iframe.wait-autoplay {
     background-position-x: 74%;
   }
 
+  .abon__item {
+    width: calc(66.66666666666667% - 30px);
+  }
+
+  .abon__item:nth-child(even):not(.abon__banner) {
+    border-left: none;
+  }
+
+  .abon__item:not(.abon__banner) {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .abon__descr {
+    margin: 0 auto;
+  }
+
   .franch {
     padding-top: 48px;
     padding-bottom: 65px;
     background-position-x: -550px;
   }
 
-  .footer__logo {
+  .footer .logo {
     width: calc(100% - 30px);
   }
 
@@ -1875,7 +2146,7 @@ iframe.wait-autoplay {
 
   .hero {
     background-position-x: center;
-    background-image: url(../img/hero-mob-bg.jpg);
+    background-image: url(../img/goldypole-text.svg), url(../img/hero-mob-bg-1.jpg);
   }
 
   .hero__content {
@@ -1883,9 +2154,8 @@ iframe.wait-autoplay {
     text-align: center;
   }
 
-  .hero__title {
-    font-size: 35px;
-    line-height: 40px;
+  .shed {
+    padding-top: 55px;
   }
 
   .faq__title {
@@ -2033,11 +2303,38 @@ iframe.wait-autoplay {
   }
 
   .banner__btn {
-    padding: 10px 40px;
+    padding: 10px 25px;
   }
 
   .nut__banner {
     background-image: none;
+  }
+
+  .abon__item {
+    width: calc(100% - 30px);
+  }
+
+  .abon__item:not(.abon__banner) {
+    padding: 0;
+  }
+
+  .abon__item:not(.abon__banner) .abon__header {
+    font-size: 40px;
+  }
+
+  .abon__btn {
+    padding: 10px 40px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .banner::after {
+    background-position-y: bottom;
   }
 }
 
