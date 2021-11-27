@@ -1,27 +1,142 @@
 .banner {
-
+	position: relative;
 	padding-top: 94px;
 	padding-left: 143px;
 	padding-bottom: 68px;
+
+	background-color: #fff;
+	background-image: url(../img/way-banner.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: right;
+	background-position-y: center;
 	
 	border-radius: 20px;
 	background-color: rgb(227, 211, 229);
   box-shadow: 0px 6px 32px 0px rgba(199, 199, 199, 0.75);
+	
+	.xl-block({
+		padding: 54px 34px;
+	});
+
+	.lg-block({
+		background-position-x: 74%;
+	});
+
+	.sm-block({
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 61px;
+		
+		text-align: center;
+		padding-bottom: 400px;
+		background-image: none;
+	});
+
+	
+	&::after {
+		display: none;
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 400px;
+		background-repeat: no-repeat;
+		background-position-y: -10px;
+		background-position-x: center;
+		background-size: cover;
+		background-image: url(../img/way-mob.jpg);
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+
+		.sm(display, block);
+		.xs(background-position-y, bottom);
+	}
+
+	&__box {
+		padding-top: 92px;
+		padding-bottom: 97px;
+	}
+
+	&__box--p {
+		padding: 0;
+		margin-top: -145px;
+	}
 
 	&__header {
-		margin-bottom: 30px;
+		margin-bottom: 24px;
+		max-width: 65%;
 
 		font-size: 35px;
 		line-height: 40px;
 		// font-weight: 500;
+
+		.xl-block({
+			font-size: 23px;
+			line-height: 25px;
+		});
+
+		.sm(max-width, 100%);
 	}
 
 	&__descr {
 		margin-bottom: 47px;
-		max-width: 550px;
+		// max-width: 580px;
+		max-width: 45%;
 
 		font-size: 18px;
 		line-height: 24px;
+
+		.xl-block({
+			font-size: 16px;
+			line-height: 21px;
+		});
+
+		.sm(max-width, 100%);
 	}
 
+	&__btn {
+		margin-bottom: 30px;
+		padding: 10px 60px;
+
+		// position: relative;
+		// z-index: 3;
+
+		.sm-block({
+			padding: 10px 25px;
+		})
+	}
+}
+
+
+
+.nut__banner {
+	background-color: @light_blue;
+	background-image: url(../img/nut-bg.jpg);
+
+	// .lg-block({
+	// 	background-position-x: -360px;
+	// });
+
+	// .md-block({
+	// 	background-position-x: -460px;
+	// });
+
+	.sm-block({
+		background-image: none;
+	});
+
+	&::after {
+		background-image: url(../img/nut-mob.jpg);
+	}
+}
+
+.pay__banner {
+	// min-height: 380px;
+	background-image: url(../img/pay-banner.jpg);
+
+	&::after {
+		background-image: url(../img/pay-mob.jpg);
+	}
 }

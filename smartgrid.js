@@ -6,9 +6,9 @@ module.exports = {
         fields: '70px' // Внимание! fields обязан быть >= offset / 2
     },
     breakPoints: {
-        // xl: {
-        //     width: '1200px'
-        // },
+        xl: {
+            width: '1200px'
+        },
         lg: {
             width: '992px',
             fields: '70px'
@@ -20,10 +20,10 @@ module.exports = {
         sm: {
             width: '576px'
         },
-        // xs: {
-        //  width: '341px',
-        //  fields: '15px'
-        // }
+        xs: {
+            width: '340px',
+            fields: '15px'
+        }
     },
     // detailedCalc: true
 };

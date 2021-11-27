@@ -1,11 +1,12 @@
 // USER VARIABLES SECTION
 
-@accent: #ffd95e; // Accent Color
+@accent: #F3D884; // Accent Color
 @fontsize: 14px; // Body Font Size
 // @lineheight: 1.875; // Document Line Height
 @white: #ffffff;
 @black: #1e1e1e;
 @blue: #013b66;
+@light_blue: #5084a9;
 @grey: #76757a;
 
 
@@ -60,17 +61,23 @@ section {
   margin: -1px;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
+	// padding-top: 60px;
+	
 	font-family: @userfont;
 	font-size: @fontsize;
 	font-weight: 500;
 	// line-height: @lineheight;
 	line-height: 1.5;
 	color: @black;
-	min-height: 100vh;
 	min-width: 320px;
 	position: relative;
 	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: antialiased;
 	// overflow-x: hidden;
 }
 

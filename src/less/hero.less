@@ -1,0 +1,54 @@
+.hero {
+	// padding-top: 40px;
+	background-color: @grey;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: bottom, center;
+	background-size: contain, cover;
+	background-image: url(../img/goldypole-text.svg), url(../img/hero-bg-1.jpg);
+	
+	.xl-block({
+		background-position-x: center, -600px;
+	});
+
+	.lg-block({
+		background-position-x: center, -760px;
+	});
+
+	.md-block({
+		background-position-x: center;
+		background-image: url(../img/goldypole-text.svg), url(../img/hero-mob-bg-1.jpg);
+	});
+	
+	&__content{
+		height: 100vh;
+		max-height: 900px;
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		.md-block({
+			align-items: center;
+			text-align: center;
+		});
+	}
+
+	&__title {
+		margin-bottom: 45px;
+		font-size: 70px;
+		line-height: 75px;
+		font-weight: 400;
+
+		.xl-block({
+			font-size: 35px;
+			line-height: 40px;
+		});
+	}
+
+	&__btn {
+		padding: 10px 60px;
+	}
+}

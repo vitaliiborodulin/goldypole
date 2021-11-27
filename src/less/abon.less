@@ -1,0 +1,172 @@
+.abon {
+	padding-top: 60px;
+	padding-bottom: 190px;
+
+	color: @white;
+	background-color: @grey;
+	background-repeat: no-repeat;
+	background-image: url(../img/goldypole-only-text.svg);
+	background-position-x: left;
+	background-position-y: top;
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__subtitle {
+		margin-bottom: 70px;
+		font-size: 16px;
+	}
+
+	&__list {
+		.row-flex();
+		justify-content: center;
+		align-items: center;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	&__item {
+		.col();
+		.size(6);
+		.size-lg(8);
+		.size-sm(12);
+		margin-bottom: 70px;
+		padding: 0 60px;
+
+		.xl-block({
+			text-align: center;
+		});
+
+		&:nth-child(even):not(.abon__banner) {
+			border-left: 1px solid @white;
+			.lg-block({
+				border-left: none;
+			})
+		}
+
+		&:not(.abon__banner){
+			.xl-block({
+				padding: 0 36px;
+			});
+			.lg-block({
+				border-bottom: 1px solid @white;
+			});
+			.sm-block({
+				padding: 0;
+			});
+
+			.abon__header {
+				margin-bottom: -13px;
+				font-weight: 700;
+				font-size: 60px;
+				// line-height: 100px;
+				text-transform: uppercase;
+				color: @grey;
+				text-shadow: 
+				-0   -1px 1px @accent,
+				 0   -1px 1px @accent,
+				-0    1px 1px @accent,
+				 0    1px 1px @accent,
+				-1px -0   1px @accent,
+				 1px -0   1px @accent,
+				-1px  0   1px @accent,
+				 1px  0   1px @accent,
+				-1px -1px 1px @accent,
+				 1px -1px 1px @accent,
+				-1px  1px 1px @accent,
+				 1px  1px 1px @accent,
+				-1px -1px 1px @accent,
+				 1px -1px 1px @accent,
+				-1px  1px 1px @accent,
+				 1px  1px 1px @accent;
+				 white-space: nowrap;
+				 text-overflow: ellipsis;
+				 overflow: hidden;
+		
+				.xl(font-size, 45px);
+				.sm(font-size, 40px);
+			}
+			.abon__count {
+				margin-bottom: 14px;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 32px;
+			}
+		}
+	}
+
+	&__descr {
+		margin-bottom: 38px;
+		max-width: 380px;
+		.lg-block({
+			margin: 0 auto;
+		});
+		li {
+			margin-bottom: 17px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__pay {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.xl-block({
+			justify-content: center;
+		});
+	}
+
+	&__price {
+		margin-right: 35px;
+		font-weight: 700;
+		font-size: 28px;
+		margin-bottom: 35px;
+		.xl-block({
+			margin-left: 35px;
+			// margin-right: 0
+		});
+	}
+
+	&__btn {
+		padding: 10px 60px;
+		margin-bottom: 35px;
+		.sm-block({
+			padding: 10px 40px;
+		})
+	}
+
+	&__banner {
+		padding: 50px 37px 35px;
+		border-radius: 15px;
+		border: 3px solid @accent;
+		border-left-color: @accent;
+
+		.abon__header {
+			margin-bottom: 30px;
+			font-weight: 500;
+			font-size: 30px;
+			line-height: 35px;
+			color: @white;
+			// white-space: initial;
+
+			.xl-block({
+				font-size: 25px;
+				line-height: 30px;
+			})
+		}
+
+		.abon__count {
+			font-size: 18px;
+			line-height: 24px;
+			font-weight: 400;
+
+			.xl-block({
+				font-size: 16px;
+				line-height: 21px;
+			})
+		}
+	}
+}
