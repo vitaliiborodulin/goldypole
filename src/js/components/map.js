@@ -3,7 +3,7 @@ $('.contacts__map').each(function(i, el) {
     var map = el.find('script');
     if (el.visible(true)) {
         map.attr('src', map.attr('data-src'));
-        map.removeAttr('data_src');
+        // map.removeAttr('data-src');
     }
 });
 
@@ -13,7 +13,7 @@ $(window).scroll(function(event) {
         var map = el.find('script');
         if (el.visible(true)) {
             map.attr('src', map.attr('data-src'));
-            map.removeAttr('data_src');
+            // map.removeAttr('data-src');
         }
     });
 });
