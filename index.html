@@ -49,7 +49,7 @@
                             <li><a href="#">Акции</a></li>
                             <li><a href="#way">Тренировки</a></li>
                             <li><a href="#abon">Стоимость</a></li>
-                            <li><a href="#shed">Расписание</a></li>
+                            <li><a href="#shedule">Расписание</a></li>
                             <li><a href="#contacts">Контакты</a></li>
                             <li><a href="#franch">Франшиза</a></li>
                             <li><a href="#faq">FAQ</a></li>
@@ -274,22 +274,79 @@
     </section>
     <!-- end banner-p-box -->
 
-    <!-- shed -->
-    <section class="shed" id="shed">
+    <!-- shedule -->
+    <section class="shedule" id="shedule">
         <div class="container">
-            <h2 class="section-title shed__title text-center title-animation-idle">Актуальное расписание</h2>
+            <h2 class="section-title shedule__title text-center title-animation-idle">Актуальное расписание</h2>
     
             <div class="shedule__box">
-                <!-- <div id="listokWidgetContainer"><iframe id="listokWapi" src="https://intgrcd289bd1f0455abd50293ee7119fed65.listokcrm.ru/wapi?v=1638010640041&amp;url=https%3A%2F%2Fgoldypole.ru%2Ftime&amp;utms=" width="100%" height="700px" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe></div> -->
+                <div class="shedule__loading">Загружаю...</div>
+                <iframe id="listokWapi" data-src="https://intgrcd289bd1f0455abd50293ee7119fed65.listokcrm.ru/wapi?v=1638010640041&amp;url=https%3A%2F%2Fgoldypole.ru%2Ftime&amp;utms=" width="100%" height="700px" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
             </div>
         </div>
     </section>
-    <!-- end shed -->
+    <!-- end shedule -->
 
     <!-- feedback -->
     <section class="feedback">
         <div class="container">
             <h2 class="section-title feedback__title text-center title-animation-idle">Отзывы о Goldy</h2>
+    
+            <div class="swiper feedback__list">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+    
+                    <div class="swiper-slide feedback__item">
+                        <div class="feedback__top">
+                            <div class="feedback__img">
+                                <img src="../img/feedback-img.png" alt="" width="60" height="60">
+                            </div>
+                            <div class="feedback__info">
+                                <h3 class="feedback__header">Наталья Волховец</h3>
+                                <div class="feedback__date">02.01.2021</div>
+                            </div>
+                        </div>
+                        <div class="feedback__bottom">
+                            Всё тянула тянула с отзывом о Goldypole, да видно больше некуда)) Наконец-то я поняла, всё было не зря! Вот оно счастье! Вот она красота, лёгкость, полёт! В Goldy учат буквально миллиону трюков, названия в основном по исполнительницам... Pадуга Марченко,
+                            трюк Наты Стрелец, шпагат Воробьёвой, да миллион элементов, красиво и интересно! Спасибо вам, за новую меня!
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide feedback__item">
+                        <div class="feedback__top">
+                            <div class="feedback__img">
+                                <img src="../img/feedback-img.png" alt="" width="60" height="60">
+                            </div>
+                            <div class="feedback__info">
+                                <h3 class="feedback__header">Наталья Волховец</h3>
+                                <div class="feedback__date">02.01.2021</div>
+                            </div>
+                        </div>
+                        <div class="feedback__bottom">
+                            Всё тянула тянула с отзывом о Goldypole, да видно больше некуда))
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination feedback__pagination"></div>
+    
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg aria-hidden="true" focusable="false" width="13" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454.68 841.89">
+    								<path fill="#fff" d="M9.59 444.05 399 832.37a32.64 32.64 0 0 0 46.09-46.22L78.86 420.94l366.23-365.2A32.64 32.64 0 0 0 399 9.53L9.59 397.84a32.63 32.63 0 0 0 0 46.21Z" />
+    							</svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg aria-hidden="true" focusable="false" width="13" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454.68 841.89">
+    								<path fill="#fff" d="M445.09 397.84 55.69 9.52A32.64 32.64 0 0 0 9.6 55.74L375.82 421 9.59 786.15a32.64 32.64 0 0 0 46.1 46.21l389.4-388.31a32.63 32.63 0 0 0 0-46.21Z" />
+    							</svg>
+                </div>
+            </div>
+    
+            <div class="feedback__btns">
+                <a href="#feedback-popup" class="btn btn-o btn-o-w feedback__btn popup" data-glightbox="width: 280; height: auto;">Оставить отзыв</a>
+            </div>
         </div>
     </section>
     <!-- end feedback -->
@@ -394,7 +451,7 @@
                     </ul>
                     <a class="btn btn-o contacts__btn" target="_blank" href="https://maps.yandex.ru/?rtext=~55.984124,37.214642&amp;rtt=auto" title="Построить маршрут на Яндекс.Картах">Проложить маршрут в навигаторе</a>
                 </div>
-                <div class="contacts__map">
+                <div class="contacts__map" style="background-image: url(img/map.jpg);">
                     <script charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8b99424c0405da1c96657341e9d5eb3146d9657a8e188fbe2a80490644616189&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=false"></script>
                 </div>
             </div>
@@ -537,6 +594,19 @@
             <div class="text-center">
                 <p>
                     Ваша заявка отправлена менеджеру. В ближайшее время мы вышлем вам на почту коммерческое предложение франшизы Goldy.
+                </p>
+            </div>
+            <a class="btn btn-o popup__btn gtrigger-close inline-close-btn" href="#">Вернуться на главную</a>
+    
+        </div>
+    </div>
+    
+    <div id="feedback-popup" class="popup__box" style="display: none">
+        <div class="popup__inner">
+            <h3 class="popup__header text-center">Спасибо!</h3>
+            <div class="text-center">
+                <p>
+                    Ваше мнение очень важно для нас, спасибо за обратную связь!
                 </p>
             </div>
             <a class="btn btn-o popup__btn gtrigger-close inline-close-btn" href="#">Вернуться на главную</a>
