@@ -1,11 +1,18 @@
-.glightbox-container .ginner-container {
-	align-items: center;
+.glightbox-container {
+	.ginner-container {
+		align-items: center;
+	}
+		
+		.gprev, .gnext {
+			display: none;
+		}
 }
 
 .gslide-inline {
+	max-width: 280px;
 	padding: 54px 16px 23px;
 	border-radius: 5px;
-	background: @white url(../img/popup-bg.jpg) no-repeat center/cover;
+	background: @white url(../img/popup-bg.jpg) no-repeat center/cover!important;
 
 	.ginlined-content {
 		padding: 0;
@@ -18,6 +25,8 @@
 }
 
 .popup {
+	// height: auto;
+
 	&__header {
 		font-size: 18px;
 		line-height: 24px;
