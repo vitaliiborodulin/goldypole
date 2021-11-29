@@ -8,6 +8,7 @@
 	background-image: url(../img/goldypole-only-text.svg);
 	background-position-x: left;
 	background-position-y: top;
+	overflow-x: hidden;
 
 	&__title {
 		margin-bottom: 20px;
@@ -139,10 +140,28 @@
 	}
 
 	&__banner {
+		position: relative;
 		padding: 50px 37px 35px;
 		border-radius: 15px;
 		border: 3px solid @accent;
 		border-left-color: @accent;
+
+		&::after {
+			position: absolute;
+			content: '';
+			left: 80%;
+			top: -6%;
+			background: url(../img/gift.png) no-repeat;
+			width: 270px;
+			height: 300px;
+
+			.xl-block({
+				left: 80px;
+				top: 80px;
+			});
+			.sm(top, 65px);
+			.xs(top, 110px);
+		};
 
 		.abon__header {
 			margin-bottom: 30px;
