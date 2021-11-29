@@ -857,11 +857,10 @@ input[type='submit'] {
   border: 1px solid #76757a;
   border-radius: 15px;
   background-color: #ffffff;
-  background-image: url(../img/recruit-bg.svg);
+  background-image: url(../img/round-girl.svg);
   background-repeat: no-repeat;
   background-position-x: 28px;
-  background-position-y: -106px;
-  background-size: 30%;
+  background-position-y: bottom;
 }
 
 .recruit__title {
@@ -1742,6 +1741,9 @@ input[type='submit'] {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
+    background-position-x: 150px;
+    background-position-y: top;
+    background-size: 130%;
   }
 
   .recruit__title {
