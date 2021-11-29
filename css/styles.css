@@ -820,7 +820,7 @@ input[type='submit'] {
 
 .shedule {
   padding-top: 125px;
-  padding-bottom: 110px;
+  padding-bottom: 50px;
 }
 
 .shedule__title {
@@ -845,6 +845,141 @@ input[type='submit'] {
   height: 100%;
   text-align: center;
   line-height: 700px;
+}
+
+.recruit {
+  padding-top: 50px;
+  padding-bottom: 109px;
+}
+
+.recruit__content {
+  padding: 70px 200px;
+  border: 1px solid #76757a;
+  border-radius: 15px;
+  background-color: #ffffff;
+  background-image: url(../img/recruit-bg.svg);
+  background-repeat: no-repeat;
+  background-position-x: 28px;
+  background-position-y: -106px;
+  background-size: 30%;
+}
+
+.recruit__title {
+  margin-bottom: 30px;
+}
+
+.recruit__info {
+  max-width: 1026px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.recruit__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.recruit__advantages {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(66.66666666666667% - 30px);
+}
+
+.recruit__advantages li {
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 70px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.recruit__advantages li::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-repeat: no-repeat;
+}
+
+.recruit__advantages li:first-child::before {
+  width: 37px;
+  height: 28px;
+  background-image: url(../img/rec-1.svg);
+}
+
+.recruit__advantages li:nth-child(2)::before {
+  width: 25px;
+  height: 22px;
+  background-image: url(../img/rec-2.svg);
+}
+
+.recruit__advantages li:nth-child(3)::before {
+  width: 37px;
+  height: 46px;
+  background-image: url(../img/rec-3.svg);
+}
+
+.recruit__advantages li:nth-child(4)::before {
+  width: 25px;
+  height: 38px;
+  background-image: url(../img/rec-4.svg);
+}
+
+.recruit__advantages li:nth-child(5)::before {
+  width: 32px;
+  height: 31px;
+  background-image: url(../img/rec-5.svg);
+}
+
+.recruit__advantages li:nth-child(6)::before {
+  width: 34px;
+  height: 31px;
+  background-image: url(../img/rec-6.svg);
+}
+
+.recruit__banner {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.333333333333336% - 30px);
+  width: 330px;
+  max-width: 100%;
+  flex-shrink: 0;
+  padding: 45px 40px 60px;
+  color: #ffffff;
+  background-color: #013b66;
+  border-radius: 15px;
+}
+
+.recruit__banner h3 {
+  margin-bottom: 45px;
+  font-size: 25px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.recruit__banner p {
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.recruit__btn {
+  padding: 10px;
 }
 
 .feedback {
@@ -1469,6 +1604,10 @@ input[type='submit'] {
     line-height: 21px;
   }
 
+  .recruit__content {
+    padding: 45px 37px;
+  }
+
   .footer__menu {
     width: calc(25% - 30px);
   }
@@ -1537,6 +1676,25 @@ input[type='submit'] {
     margin: 0 auto;
   }
 
+  .recruit {
+    padding-top: 30px;
+    padding-bottom: 58px;
+  }
+
+  .recruit__info {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .recruit__advantages li {
+    margin-bottom: 34px;
+    font-size: 14px;
+  }
+
+  .recruit__banner {
+    padding: 40px 30px 50px;
+  }
+
   .franch {
     padding-top: 48px;
     padding-bottom: 65px;
@@ -1578,6 +1736,40 @@ input[type='submit'] {
 
   .shedule {
     padding-top: 55px;
+  }
+
+  .recruit__content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .recruit__title {
+    padding: 0 13px;
+  }
+
+  .recruit__info {
+    padding: 0 13px;
+  }
+
+  .recruit__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .recruit__advantages {
+    width: calc(100% - 30px);
+  }
+
+  .recruit__advantages {
+    padding: 0 13px;
+  }
+
+  .recruit__banner {
+    width: calc(100% - 30px);
+  }
+
+  .recruit__banner {
+    padding: 40px 18px 50px;
   }
 
   .faq__title {
