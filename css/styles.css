@@ -395,7 +395,7 @@ input[type='submit'] {
 }
 
 .header__menu li {
-  margin: 0 30px;
+  margin: 0 15px;
   font-weight: 400;
   font-size: 14px;
 }
@@ -412,7 +412,7 @@ input[type='submit'] {
 }
 
 .header__more li + li {
-  margin-left: 60px;
+  margin-left: 50px;
 }
 
 .header__login svg {
@@ -424,6 +424,11 @@ input[type='submit'] {
   display: flex;
   align-items: center;
   text-decoration: underline;
+}
+
+.header__tel {
+  font-size: 21px;
+  font-weight: 500;
 }
 
 .header__burger {
