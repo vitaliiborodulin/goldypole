@@ -1607,7 +1607,7 @@ input[type='submit'] {
 
   .abon__banner::after {
     left: 80px;
-    top: 40px;
+    top: 80px;
   }
 
   .abon__banner .abon__header {
@@ -1960,7 +1960,7 @@ input[type='submit'] {
   }
 
   .abon__banner::after {
-    top: 70px;
+    top: 65px;
   }
 }
 
@@ -1972,6 +1972,10 @@ input[type='submit'] {
 
   .banner::after {
     background-position-y: bottom;
+  }
+
+  .abon__banner::after {
+    top: 110px;
   }
 }
 
