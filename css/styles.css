@@ -197,6 +197,10 @@ select {
   font: inherit;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
 *:focus:not(:focus-visible) {
@@ -1091,6 +1095,7 @@ input[type='submit'] {
 .faq {
   padding-top: 72px;
   padding-bottom: 83px;
+  overflow-x: hidden;
 }
 
 .faq__content {
@@ -1103,6 +1108,7 @@ input[type='submit'] {
 }
 
 .faq__list {
+  margin-bottom: 65px;
   font-size: 16px;
   line-height: 21px;
 }
@@ -1147,6 +1153,74 @@ input[type='submit'] {
 
 .faq__answer {
   margin-top: 13px;
+}
+
+.faq__form {
+  position: relative;
+  padding: 37px 50px 25px;
+  background-color: #ffffff;
+  border: 1px solid #76757a;
+  border-radius: 15px;
+  box-shadow: 0px 6px 32px 0px rgba(199, 199, 199, 0.75);
+}
+
+.faq__form::before {
+  position: absolute;
+  content: '';
+  left: 90%;
+  bottom: 90%;
+  background-image: url(../img/crown.png);
+  background-repeat: no-repeat;
+  width: 152px;
+  height: 135px;
+}
+
+.faq__form-title {
+  margin-bottom: 17px;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.faq__form-subtitle {
+  margin-bottom: 45px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.faq__form-btn {
+  margin-bottom: 22px;
+  padding: 10px 60px;
+}
+
+.faq__form a {
+  color: inherit;
+}
+
+.faq .form__group {
+  max-width: 525px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq .form__group input {
+  margin-bottom: 15px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.faq .form__group textarea {
+  margin-bottom: 35px;
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+
+.faq .form__agree {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .rent {
@@ -1501,10 +1575,20 @@ input[type='submit'] {
   margin-top: 50px;
 }
 
+.form__input {
+  text-align: left;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #76757a;
+}
+
 .bottom {
   position: fixed;
   right: 10px;
   bottom: 70px;
+  z-index: 999;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1711,6 +1795,16 @@ input[type='submit'] {
     padding: 40px 30px 50px;
   }
 
+  .feedback {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .faq {
+    padding-bottom: 36px;
+    padding-top: 55px;
+  }
+
   .franch {
     padding-top: 48px;
     padding-bottom: 65px;
@@ -1798,6 +1892,28 @@ input[type='submit'] {
   .faq__list {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .faq__form {
+    padding: 37px 15px 25px;
+  }
+
+  .faq__form::before {
+    bottom: 85%;
+    background-size: 60%;
+  }
+
+  .faq .form__group {
+    flex-wrap: wrap;
+  }
+
+  .faq .form__group input {
+    width: 100%;
+  }
+
+  .faq .form__agree {
+    font-size: 10px;
+    line-height: 14px;
   }
 
   .rent {
@@ -1961,6 +2077,10 @@ input[type='submit'] {
 
   .abon__banner::after {
     top: 65px;
+  }
+
+  .faq__form::before {
+    left: 85%;
   }
 }
 
