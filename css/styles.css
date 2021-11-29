@@ -165,7 +165,7 @@ body {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -175,6 +175,7 @@ body {
   position: relative;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .section-title {
@@ -519,6 +520,7 @@ input[type='submit'] {
 
 .hero__content {
   height: 100vh;
+  min-height: 500px;
   max-height: 900px;
   max-width: 1170px;
   margin: 0 auto;
