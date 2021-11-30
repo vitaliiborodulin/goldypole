@@ -51,7 +51,7 @@ $(function() {
         });
     });
     const burger = $('.header__burger');
-    const menu = $('.header__menu');
+    const menu = $('.nav');
     
     // if ($('html').hasClass('scroll-disabled')) {
     //     $('html').removeClass('scroll-disabled');
@@ -60,13 +60,13 @@ $(function() {
     burger.on('click', function(e) {
         e.preventDefault();
         burger.toggleClass('header__burger--close');
-        menu.toggleClass('header__menu--open');
+        menu.toggleClass('nav--open');
         // $('html').toggleClass('scroll-disabled');
     });
     
     $(document).keyup(function(e) {
         if (e.key === "Escape" || e.keyCode === 27) {
-            $('.header__menu').removeClass('header__menu--open');
+            menu.removeClass('nav--open');
             burger.removeClass('header__burger--close');
             // $('html').removeClass('scroll-disabled');
         }
@@ -80,7 +80,7 @@ $(function() {
         }, 300);
         e.preventDefault();
         burger.toggleClass('header__burger--close');
-        menu.toggleClass('header__menu--open');
+        menu.toggleClass('nav--open');
         // $('html').toggleClass('scroll-disabled');
     });
     $('.shedule__loading').one('click', function() {

@@ -254,7 +254,7 @@ input[type='submit'] {
   cursor: pointer;
   transition: all 0.3s ease;
   background: linear-gradient(90deg, rgba(218, 175, 83), #d19e4d, #fff9b1, #f1d37d);
-  box-shadow: 0px 6px 32px 0px rgba(1, 26, 45, 0.75);
+  box-shadow: 0px 6px 32px 0px rgba(49, 50, 53, 0.75);
 }
 
 .btn:hover {
@@ -383,10 +383,29 @@ input[type='submit'] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1840px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header .logo {
+  width: 20%;
   padding: 0 30px;
+}
+
+.header .nav {
+  width: 40%;
+  max-width: 100%;
+}
+
+.header .nav a {
+  padding: 10px;
+}
+
+.header .nav.nav--open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .header__menu {
@@ -395,28 +414,27 @@ input[type='submit'] {
 }
 
 .header__menu li {
-  margin: 0 15px;
   font-weight: 400;
   font-size: 14px;
 }
 
-.header__menu.header__menu--open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.header__menu li a {
+  padding: 10px;
 }
 
 .header__more {
-  flex-shrink: 0;
+  width: 40%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .header__more li + li {
-  margin-left: 50px;
+  margin-left: 13px;
 }
 
 .header__login svg {
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 .header__login a {
@@ -424,6 +442,10 @@ input[type='submit'] {
   display: flex;
   align-items: center;
   text-decoration: underline;
+}
+
+.header__contact {
+  flex-shrink: 0;
 }
 
 .header__tel {
@@ -1024,7 +1046,7 @@ input[type='submit'] {
   width: 350px;
   max-width: 100%;
   height: 690px;
-  background: url(../img/mobile.svg) no-repeat;
+  background: url(../img/iphone-frame.svg) no-repeat;
 }
 
 .feedback__item {
@@ -1055,11 +1077,15 @@ input[type='submit'] {
 .feedback__bottom {
   font-size: 14px;
   line-height: 18px;
-  background-color: #ffffff;
 }
 
 .feedback__pagination {
   bottom: 0!important;
+}
+
+.feedback__pagination .swiper-pagination-bullet {
+  background: transparent;
+  border: 1px solid #ffffff;
 }
 
 .feedback__pagination .swiper-pagination-bullet-active {
@@ -1604,13 +1630,17 @@ input[type='submit'] {
     padding: 5px 0;
   }
 
+  .header .logo {
+    width: auto;
+  }
+
   .header .logo img {
     width: 124px;
     height: 45px;
   }
 
-  .header__menu {
-    text-align: center;
+  .header .nav {
+    width: 320px;
     -webkit-transform: translateX(-150%);
             transform: translateX(-150%);
     display: none;
@@ -1618,29 +1648,31 @@ input[type='submit'] {
             transform-origin: right top;
     transition: all 0.5s ease-in-out;
     display: flex;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 12;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 12;
-    width: 100%;
-    height: 100%;
-    padding: 40px;
+    align-items: flex-start;
+    padding: 10px;
     color: #1e1e1e;
     background-color: #ffffff;
   }
 
-  .header__menu li {
-    margin-bottom: 20px;
-    font-size: 30px;
-    margin: 10px;
-    padding: 10px;
+  .header__menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
   }
 
-  .header__more li + li {
-    margin-left: 40px;
+  .header__menu li {
+    margin-bottom: 10px;
+  }
+
+  .header__more {
+    width: auto;
   }
 
   .header__login a > span {
@@ -1738,10 +1770,6 @@ input[type='submit'] {
   .section-subtitle {
     font-size: 16px;
     line-height: 24px;
-  }
-
-  .header__more li + li {
-    margin-left: 20px;
   }
 
   .way {
