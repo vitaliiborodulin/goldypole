@@ -536,6 +536,10 @@ input[type='submit'] {
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
+.header__mobile {
+  display: none;
+}
+
 .hero {
   background-color: #76757a;
   background-repeat: no-repeat;
@@ -1687,6 +1691,10 @@ input[type='submit'] {
   .header__burger {
     display: block;
     display: flex;
+  }
+
+  .header__mobile {
+    display: block;
   }
 
   .hero__title {
