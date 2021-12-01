@@ -1083,6 +1083,24 @@ input[type='submit'] {
   line-height: 18px;
 }
 
+.feedback__last .feedback__top {
+  padding: 0 20px;
+  margin-top: 90px;
+  margin-bottom: 12px;
+}
+
+.feedback__last .feedback__header {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.feedback__last .feedback__bottom {
+  margin-bottom: 70px;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
 .feedback__pagination {
   bottom: 0!important;
 }
