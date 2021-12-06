@@ -544,7 +544,7 @@ input[type='submit'] {
   background-color: #76757a;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: bottom, center;
+  background-position-y: bottom, 60px;
   background-size: contain, cover;
   background-image: url(../img/goldypole-text.svg), url(../img/hero-bg-1.jpg);
 }
@@ -716,6 +716,11 @@ input[type='submit'] {
   max-width: 45%;
   font-size: 18px;
   line-height: 24px;
+}
+
+.banner__small {
+  font-size: 13px;
+  padding: 5px 0;
 }
 
 .banner__btn {
@@ -1321,9 +1326,11 @@ input[type='submit'] {
 .rent__list {
   max-width: 60%;
   margin-bottom: 42px;
+  text-align: left;
 }
 
 .rent__list li {
+  list-style: disc;
   margin-bottom: 3px;
 }
 
@@ -1715,6 +1722,10 @@ input[type='submit'] {
     display: block;
   }
 
+  .hero {
+    background-position-x: center, -500px;
+  }
+
   .hero__title {
     font-size: 35px;
     line-height: 40px;
@@ -1796,6 +1807,10 @@ input[type='submit'] {
   .section-subtitle {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .hero {
+    background-position-x: center, -700px;
   }
 
   .way {
@@ -1896,8 +1911,7 @@ input[type='submit'] {
   }
 
   .hero {
-    background-position-x: center;
-    background-image: url(../img/goldypole-text.svg), url(../img/hero-mob-bg-1.jpg);
+    background: #76757a url(../img/banner-320.jpg) no-repeat center bottom / cover;
   }
 
   .hero__content {
@@ -1996,7 +2010,8 @@ input[type='submit'] {
   }
 
   .rent__list {
-    max-width: 100%;
+    max-width: 95%;
+    margin: 0 auto 42px;
   }
 
   .franch::after {
