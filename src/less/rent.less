@@ -56,9 +56,14 @@
 	&__list {
 		max-width: 60%;
 		margin-bottom: 42px;
-		.md(max-width, 100%);
+		text-align: left;
+		.md-block({
+			max-width: 95%;
+			margin: 0 auto 42px;
+		});
 
 		li {
+			list-style: disc;
 			margin-bottom: 3px;
 		}
 	}

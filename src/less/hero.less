@@ -3,21 +3,22 @@
 	background-color: @grey;
 	background-repeat: no-repeat;
 	background-position-x: center;
-	background-position-y: bottom, center;
+	background-position-y: bottom, 60px;
 	background-size: contain, cover;
 	background-image: url(../img/goldypole-text.svg), url(../img/hero-bg-1.jpg);
 	
-	// .xl-block({
-	// 	background-position-x: center, -600px;
-	// });
+	.xl-block({
+		background-position-x: center, -500px;
+	});
 
-	// .lg-block({
-	// 	background-position-x: center, -760px;
-	// });
+	.lg-block({
+		background-position-x: center, -700px;
+	});
 
 	.md-block({
-		background-position-x: center;
-		background-image: url(../img/goldypole-text.svg), url(../img/hero-mob-bg-1.jpg);
+		// background-position-x: center;
+		// background-image: url(../img/goldypole-text.svg), url(../img/hero-mob-bg-1.jpg);
+		background: @grey url(../img/banner-320.jpg) no-repeat center bottom/cover;
 	});
 	
 	&__content{
