@@ -738,6 +738,7 @@ input[type='submit'] {
 }
 
 .pay__banner {
+  background-position-x: 64%;
   background-image: url(../img/pay-banner.jpg);
 }
 
@@ -1834,6 +1835,10 @@ input[type='submit'] {
 
   .banner {
     background-position-x: 74%;
+  }
+
+  .pay__banner {
+    background-position-x: 64%;
   }
 
   .abon__item {
