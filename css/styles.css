@@ -743,6 +743,7 @@ input[type='submit'] {
 }
 
 .pay__banner::after {
+  background-position-y: 0;
   background-image: url(../img/pay-mob.jpg);
 }
 
