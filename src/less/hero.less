@@ -8,17 +8,17 @@
 	background-image: url(../img/goldypole-text.svg), url(../img/hero-bg-1.jpg);
 	
 	.xl-block({
-		background-position-x: center, -500px;
+		background-position-x: center, -390px;
 	});
 
 	.lg-block({
-		background-position-x: center, -700px;
+		background-position-x: center, -600px;
 	});
 
 	.md-block({
 		// background-position-x: center;
 		// background-image: url(../img/goldypole-text.svg), url(../img/hero-mob-bg-1.jpg);
-		background: @grey url(../img/banner-320.jpg) no-repeat center bottom/cover;
+		background: @grey url(../img/banner-320-2.jpg) no-repeat center bottom/cover;
 	});
 	
 	&__content{
@@ -33,6 +33,8 @@
 		align-items: flex-start;
 
 		.md-block({
+			padding-top: 200px;
+			justify-content: flex-start;
 			align-items: center;
 			text-align: center;
 		});
@@ -48,6 +50,9 @@
 			font-size: 35px;
 			line-height: 40px;
 		});
+
+		.md(margin-bottom, 30px);
+		.sm(font-size, 30px);
 	}
 
 	&__btn {
