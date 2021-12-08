@@ -1725,7 +1725,7 @@ input[type='submit'] {
   }
 
   .hero {
-    background-position-x: center, -500px;
+    background-position-x: center, -390px;
   }
 
   .hero__title {
@@ -1812,7 +1812,7 @@ input[type='submit'] {
   }
 
   .hero {
-    background-position-x: center, -700px;
+    background-position-x: center, -600px;
   }
 
   .way {
@@ -1917,12 +1917,18 @@ input[type='submit'] {
   }
 
   .hero {
-    background: #76757a url(../img/banner-320.jpg) no-repeat center bottom / cover;
+    background: #76757a url(../img/banner-320-2.jpg) no-repeat center bottom / cover;
   }
 
   .hero__content {
+    padding-top: 200px;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+  }
+
+  .hero__title {
+    margin-bottom: 30px;
   }
 
   .shedule {
@@ -2099,6 +2105,10 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 576px) {
+  .hero__title {
+    font-size: 30px;
+  }
+
   .way {
     padding-top: 48px;
     padding-bottom: 50px;
