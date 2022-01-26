@@ -162,11 +162,21 @@ $(function() {
             }
         });
     });
-    const lightbox = GLightbox({
-        touchNavigation: false,
-        keyboardNavigation: false,
-        draggable: false,
-        selector: '.popup'
+    // const lightbox = GLightbox({
+    //     touchNavigation: false,
+    //     keyboardNavigation: false,
+    //     draggable: false,
+    //     selector: '.popup'
+    // });
+    
+    MicroModal.init({
+        awaitCloseAnimation: true,
+        // onShow: () => $('body').scrollTop().addClass('hidden'),
+        onShow: () => {
+            $(this).scrollTop();
+            $('body').addClass('hidden')
+        },
+        onClose: () => $('body').removeClass('hidden')
     });
     var arrowUpBtn = $('.btn-up');
     
