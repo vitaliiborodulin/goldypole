@@ -887,7 +887,6 @@ input[type='submit'] {
   position: relative;
   z-index: 1;
   background-color: #76757a;
-  height: 700px;
 }
 
 .shedule__loading {
@@ -1257,6 +1256,10 @@ input[type='submit'] {
 
 .faq__form a {
   color: inherit;
+}
+
+.faq__form * {
+  max-width: 100%;
 }
 
 .faq .form__group {
@@ -1646,6 +1649,12 @@ input[type='submit'] {
   font-size: 12px;
   border-radius: 5px;
   border: 1px solid #76757a;
+}
+
+input:not(type="checkbox") {
+  margin-bottom: 15px;
+  width: 250px;
+  max-width: 100%;
 }
 
 .bottom {
@@ -2101,6 +2110,10 @@ input[type='submit'] {
 
   .footer__pm {
     justify-content: center;
+  }
+
+  input:not(type="checkbox") {
+    width: 100%;
   }
 }
 
